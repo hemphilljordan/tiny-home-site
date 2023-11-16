@@ -1,0 +1,501 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1D1D1D;
+  font-family: 'Hanken Grotesk', sans-serif;
+  transition: background-color 0.5s ease;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  padding: 64px 20px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1D1D1D;
+  width: 100%;
+  z-index: 999;
+}
+
+li img {
+  height: 130px;
+}
+
+#brand a {
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+}
+
+#brand a:hover {
+  color: #959189;
+  transition: 0.5s;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Questrial', sans-serif;
+}
+
+ul a {
+  color: #ffffff;
+}
+
+ul a:hover, ul g:hover, ul svg:hover {
+  color: #959189;
+  transition: 0.5s;
+  fill: #959189;
+}
+
+ul li {
+  padding-right: 20px;
+  margin-left: 10px;
+}
+
+
+
+
+
+main {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+
+
+.right-reservation-container {
+  background-color: rgb(230, 231, 232);
+  width: 270px;
+  padding: 18px;
+  color: #fff;
+}
+
+.cost-container {
+  background-color: #fff;
+  border: 1px solid black;
+}
+
+.res-container {
+  background-color: rgb(114, 102, 88);
+  padding: 12px 18px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.total-price {
+  color: #000;
+}
+
+.total-price span {
+  text-align: right;
+} 
+
+/* left container */
+
+.left-container {
+  background-color: #fff;
+  flex: 1;
+  max-width: 832px;
+  min-width: 682px;
+  padding: 18px;
+}
+
+/* checkin dates */
+
+.check-in-dates {
+  background-color: rgb(230, 231, 232);
+  border: 1px solid black;
+  padding: 18px;
+}
+
+.top-checkin {
+  display: flex;
+  align-items: center;
+}
+
+.top-checkin p,
+.mid-checkin p {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.checkin-out {
+  padding-right: 18px;
+}
+
+.checkin-out input,
+.guest-number {
+  height: 36px;
+  padding: 10px;
+}
+
+.checkin-out input {
+  border: none;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.top-checkin button {
+  background-color: rgb(0, 119, 200);
+  color: #fff;
+  width: 120px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.mid-checkin {
+  margin-top: 18px;
+}
+
+.special-rates {
+  display: flex;
+  margin-top: 18px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.special-rates img {
+  width: 12px;
+  margin-right: 5px;
+}
+
+.show-special-rates {
+  display: none;
+}
+
+.show-special-rates:target {
+  display: block;
+}
+
+/* card card */
+
+.cabin-card {
+  margin-top: 18px;
+  border: 2px solid rgb(230, 231, 232);
+  padding: 18px
+}
+
+.cabin-card h1 {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.cabin-info {
+  display: flex;
+  height: 300px;
+}
+
+.cabin-image-card, .cabin-info p {
+  width: 50%;
+}
+
+.cabin-info p {
+  padding-left: 18px;
+  font-size: 15px;
+}
+
+.cabin-image-card {
+  position: relative;
+}
+
+.cabin-image-card img {
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+.hidden-pic {
+  opacity: 0;
+}
+
+.car-button {
+  position: absolute;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.3; 
+}
+
+.car-button:hover {
+  opacity: 1;
+}
+
+.next {
+  right: 20px;
+  top: 130px;
+}
+
+.prev {
+  left: 20px;
+  top: 130px;
+}
+
+.bottom-carousel-container {
+  background-color: #000;
+  color: #bbbbbb;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 11px;
+  font-family: Arial;
+}
+
+.cabin-image-card svg {
+  position: absolute;
+  z-index: 5;
+  bottom: 10px;
+  right: 12px;
+  cursor: pointer;
+}
+
+
+/* full screen carousel */
+
+.full-screen-carousel {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.full-screen-carousel img {
+  position: absolute;
+  top: 110px;
+  left: 260px;
+  border: 30px solid #fff;
+  outline: 10px solid #000;
+  height: 600px;
+}
+
+#prev-full {
+  top: 350px;
+  left: 180px;
+  width: 50px;
+  height: 60px;
+  background-color: #fff;
+  color: #000;
+}
+
+#prev-full:hover {
+  opacity: 0.7;
+}
+
+#next-full {
+  top: 350px;
+  right: 130px;
+  width: 50px;
+  height: 60px;
+  background-color: #fff;
+  color: #000;
+}
+
+#next-full {
+  background-color: #fff;
+  color: #000;
+}
+
+#close-full-screen {
+  top: 40px;
+  right: 150px;
+  width: 50px;
+  height: 60px;
+  background-color: #fff;
+  color: #000;
+  opacity: 0.8;
+}
+
+
+
+
+/* .white-background { 
+  position: absolute;
+  top: 20px;
+} */
+
+
+
+
+
+
+
+
+
+/* bottom container */
+
+
+.pet-container {
+  padding-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.pet-container p {
+  margin-right: 6px;
+}
+
+.pet-menu {
+  width: 48px;
+  height: 32px;
+}
+
+.available-rates {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(230, 231, 232);
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 18px 12px;
+  margin-top: 18px;
+  font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: #959189;
+  font-style: italic;
+}
+
+/* main menu */
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+  /* z-index: 1; */
+}
+
+#hamburger-icon div{
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  background-color: #262626;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+  /* z-index: -1; */
+}
+
+.mobile-menu li {
+  margin-top: 40px;
+  font-size: 30px;
+}
+
+.btn {
+  background-color: #959189;
+  color: #fff;
+  padding: 25px 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: lightgray;
+  transition: 0.5s;
+}
+
+
+@media (max-width: 768px) {
+
+  header nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+
+  .header-links {
+    display: none;
+  }
+
+  .title {
+    font-family: 'Oswald';
+    font-size: 90px;
+    font-weight: 200;
+    color: #F49384;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0; 
+    padding: 0; 
+    margin-bottom: -50px;
+  }
+  } 
+

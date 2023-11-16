@@ -1,0 +1,298 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1D1D1D;
+  font-family: 'Hanken Grotesk', sans-serif;
+  transition: background-color 0.5s ease;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  padding: 64px 20px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1D1D1D;
+  width: 100%;
+  z-index: 9;
+}
+
+li img {
+  height: 130px;
+}
+
+#brand a {
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+}
+
+#brand a:hover {
+  color: #959189;
+  transition: 0.5s;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Questrial', sans-serif;
+}
+
+ul a {
+  color: #ffffff;
+}
+
+ul a:hover, ul g:hover, ul svg:hover {
+  color: #959189;
+  transition: 0.5s;
+  fill: #959189;
+}
+
+ul li {
+  padding-right: 20px;
+  margin-left: 10px;
+}
+
+/* About Section */
+
+.about-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 80px 50px;
+  align-items: center;
+}
+
+.about-container img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.left-about {
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-about img {
+  height: 100%;
+  width: 100%;
+}
+
+.right-about {
+  flex: 1;
+  margin-right: 50px;
+}
+
+h1, p, h3 {
+  color: #fff;
+}
+
+h1 {
+  font-size: 46px;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 24px;
+  line-height: 2;
+}
+
+.btn {
+  background-color: #959189;
+  color: #fff;
+  padding: 25px 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: lightgray;
+  transition: 0.5s;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(50%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+/* take a tour */
+
+.image {
+  height: 100%;
+  width: 100%;
+  background-color: #ccc;
+}
+
+.tour-btn {
+  background-color: #959189;
+  color: #fff;
+  padding: 15px 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  max-width: 200px;
+}
+
+
+/* reviews */
+
+.review-section {
+  display: flex;
+  margin: 0 50px;
+  margin-bottom: 50px;
+}
+
+.review-card {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.review-title {
+  margin-left: 50px;
+}
+
+/* book container */
+
+.book-container {
+  background-image: url('img/Exterior-35.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: #959189;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin-bottom: 80px;
+}
+
+#book-btn {
+  background-color: #fff;
+  color: #959189;
+  outline: none;
+}
+
+#book-btn:hover {
+  background-color: lightgray;
+}
+
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: #959189;
+  font-style: italic;
+}
+
+
+
+/* main menu */
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#hamburger-icon div{
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  background-color: #262626;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+  z-index: -1;
+}
+
+.mobile-menu li {
+  margin-top: 40px;
+  font-size: 30px;
+}
+
+
+@media (max-width: 768px) {
+
+  header nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+
+  .header-links {
+    display: none;
+  }
+
+  .title {
+    font-family: 'Oswald';
+    font-size: 90px;
+    font-weight: 200;
+    color: #F49384;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0; 
+    padding: 0; 
+    margin-bottom: -50px;
+  }
+  } 
+

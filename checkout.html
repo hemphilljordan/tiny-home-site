@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- <script src="https://js.stripe.com/v3"></script> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noticia+Text&family=Playfair+Display&family=Source+Code+Pro&family=Source+Sans+3:ital,wght@0,300;0,600;1,300&family=Yeseva+One&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <a href="">Photos</a>
+      <a href="">Amenities</a>
+      <a href="">About</a>
+      <a href="">Contact</a>
+    </div>
+  </header>
+
+  <div class="full-container">
+  <div class="main-container">
+    <div class="guest-container">
+      <h2>Guest Information</h2>
+      <p> FIRST NAME</p>
+      <input>
+      <p> LAST NAME</p>
+      <input>
+      <p> MOBILE PHONE</p>
+      <input>
+      <p class="disclaimer">By providing your phone number, you agree to receive text messages from The Smoke Jumper.
+        Data rates may apply. Message frequency varies.</p>
+      <p> EMAIL</p>
+      <input>
+      <p> NAME(S) OF ADDITIONAL GUEST(S)</p>
+      <input>
+      <p>SPECIAL ACCOMODATIONS</p>
+      <textarea></textarea>
+      <p>DIETARY RESTRICTIONS</p>
+      <textarea></textarea>
+      <p>ARRIVAL TIME</p>
+      <select id="arrival-time">
+        <option value="">Select Arrival Time</option>
+        <option value="16:00">4:00 PM</option>
+        <option value="16:30">4:30 PM</option>
+        <option value="17:00">5:00 PM</option>
+        <option value="17:30">5:30 PM</option>
+        <option value="18:00">6:00 PM</option>
+        <option value="18:30">6:30 PM</option>
+        <option value="19:00">7:00 PM</option>
+        <option value="19:30">7:30 PM</option>
+        <option value="20:00">8:00 PM</option>
+        <option value="20:30">8:30 PM</option>
+        <option value="21:00">9:00 PM</option>
+        <option value="21:30">9:30 PM</option>
+        <option value="22:00">10:00 PM</option>
+        <option>Other (specify below)</option>
+      </select>
+    </div>
+
+    <div class="billing-container">
+      <h2>Billing Information</h2>
+      <p>CARDHOLDER NAME</p>
+      <input>
+      <p>NUMBER</p>
+      <input>
+      <p>CVV</p>
+      <input>
+      <p>STREET ADDRESS</p>
+      <input>
+      <p>CITY</p>
+      <input>
+      <p>STATE/PROVINCE</p>
+      <input>
+      <p>POSTAL CODE</p>
+      <input>
+    </div>
+
+    <div class="bottom-container">
+      <div class="checkbox-container">
+        <input type="checkbox" class="myCheckbox" name="myCheckbox"><label for="myCheckbox">Yes! Please send me occasional
+          updates on promotions and specials
+        </label>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" class="myCheckbox" name="myCheckbox"><label for="myCheckbox">I agree to the <a href="">Terms & Conditions</a> and <a href="">Cancellation Policy</a>
+        </label>
+      </div>
+      <p>CANCELLATION POLICY</p>
+      <textarea class="cancel-policy" cols="50" rows="5" style="overflow: auto;" readonly>
+        To receive a full refund, guests must cancel within 48 hours of booking, and the cancellation must occur at least 14 days prior to check-in day.
+        
+        To receive a 50% refund guests must cancel prior to 7 days before check-in.
+        
+        If canceled after 7 days prior to arrival guest is responsible for 100% of reservation cost.
+        </textarea>
+        <div class="buttons">
+        <button>Add another room</button><button class="confirm-btn" onclick="window.location.href='https://buy.stripe.com/fZebJ68LpbXug00aEF'">Confirm Reservation</button>
+      </div>
+      </div>
+  </div>
+  <div class="reservation-container">
+    <h2>Your Reservation</h2>
+    
+  </div>
+</div>
+
+<div class="footer">
+  <h1>The Smokejumper Tiny Home Resort</h1>
+</div>
+  <script src="script.js"></script>
+</body>
+
+</html>

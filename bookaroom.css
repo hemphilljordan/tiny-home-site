@@ -1,0 +1,450 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1D1D1D;
+  font-family: 'Hanken Grotesk', sans-serif;
+  transition: background-color 0.5s ease;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  padding: 64px 20px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1D1D1D;
+  width: 100%;
+  z-index: 9;
+}
+
+li img {
+  height: 130px;
+}
+
+#brand a {
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+}
+
+#brand a:hover {
+  color: #959189;
+  transition: 0.5s;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Questrial', sans-serif;
+}
+
+ul a {
+  color: #ffffff;
+}
+
+ul a:hover, ul g:hover, ul svg:hover {
+  color: #959189;
+  transition: 0.5s;
+  fill: #959189;
+}
+
+ul li {
+  padding-right: 20px;
+  margin-left: 10px;
+}
+
+
+
+/* Main Container */
+
+.check-availability {
+  background-color: #fff;
+  display: flex;
+  margin: 200px 50px;
+}
+
+/* .check-availability img {
+  width: 50vw;
+  height: 100%;
+} */
+
+.check-availability img {
+  width: 100%;
+  padding: 20px 20px;
+}
+
+.left-side {
+  flex: 2;
+  background-color: #ccc;
+}
+
+.right-side {
+  flex: 1;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.check-availability h1 {
+  color: #000;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+.checkin-out {
+  display: flex;
+}
+
+.checkin {
+  padding-right: 20px;
+}
+
+input {
+  height: 40px;
+  width: 100%;
+  font-family: 'Source Sans 3', sans-serif;
+  cursor: pointer;
+}
+
+select {
+  height: 40px;
+  width: 60px;
+  padding-left: 15px;
+  font-family: 'Source Sans 3', sans-serif;
+}
+
+p {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.special-rates {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plus {
+  color: white;
+}
+
+.rates {
+  padding-left: 10px;
+}
+
+.search-btn {
+  margin-top: 30px;
+  background-color: #0278C8;
+  color: #fff;
+  width: 130px;
+  padding: 10px 0;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+}
+
+.results {
+  /* display: none; */
+  display:flex;
+  justify-content: space-between;
+  background-color: #fff;
+  margin: 200px 50px;
+}
+
+.left-container {
+  flex: 2;
+}
+
+.result-checkin {
+  display: flex;
+}
+
+.update-dates {
+  background-color: #ccc;
+  margin: 10px 20px;
+  padding: 20px 20px;
+}
+
+.right-container {
+  background-color: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+}
+
+.reservation-box {
+  margin: 40px 0;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.res-title {
+  font-size: 18px;
+}
+
+.your-res {
+  background-color: #726658;
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  width: 90%;
+  text-align: center;
+  color: #fff;
+  padding: 10px 10px;
+}
+
+.tax-price {
+  font-weight: 400;
+  margin-left: 50px;
+  visibility: hidden;
+}
+
+.total-box {
+  background-color: #fff;
+  width: 90%;
+  padding: 20px
+}
+
+.price-text-container {
+  padding-bottom: 10px;
+}
+
+.arrow-svg {
+  transform: scaleY(-1);
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
+.prices {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.tax-container {
+  display: flex;
+  margin-bottom: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.price-dollar {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+
+
+
+
+/* CABIN CARD */
+
+.cabin-card {
+  background-color: #fff;
+  border: 1px solid black;
+  margin: 10px 20px;
+  width: 800px;
+  height: 500px;
+}
+
+.cabin-card h2 {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.description {
+  margin-left: 20px;
+}
+
+.cabin-content {
+  display: flex;
+  padding: 20px 20px;
+  height: 300px;
+}
+
+.cabin-content section {
+  width: 40%;
+}
+
+.des-right {
+  flex: 1;
+}
+
+.bottom-carousel p {
+  background-color: #000;
+  margin-top: -5px;
+  padding: 5px 0;
+  color: #fff;
+}
+
+
+.bottom-rates {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 20px;
+  padding: 20px 20px;
+  background-color: #ccc;
+}
+
+.bottom-rates button{
+  background-color: green;
+  color: #fff;
+  padding: 2px 20px;
+  font-weight: bold;
+}
+
+.thin-text {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.total-price {
+  font-size: 18px;
+}
+
+
+/* Cabin Carousel Card */
+
+.cabin-carousel-left {
+  flex: 1;
+  position: relative;
+  border: 1px solid red;
+}
+
+
+
+/* footer */
+.footer {
+  text-align: center;
+  font-size: 13px;
+  color: #959189;
+  font-style: italic;
+}
+
+/* main menu */
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#hamburger-icon div{
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  background-color: #262626;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Oswald', sans-serif;
+  z-index: -1;
+}
+
+.mobile-menu li {
+  margin-top: 40px;
+  font-size: 30px;
+}
+
+.btn {
+  background-color: #959189;
+  color: #fff;
+  padding: 25px 60px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: lightgray;
+  transition: 0.5s;
+}
+
+
+@media (max-width: 768px) {
+
+  header nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+
+  .header-links {
+    display: none;
+  }
+
+  .title {
+    font-family: 'Oswald';
+    font-size: 90px;
+    font-weight: 200;
+    color: #F49384;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0; 
+    padding: 0; 
+    margin-bottom: -50px;
+  }
+  } 
+

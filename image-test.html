@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bookaroom copy.css">
+</head>
+
+
+<style>
+  .carousel {
+    position: relative;
+    height: 200px;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .carousel_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .carousel_track-container {
+    background: lightgreen;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel_track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+  }
+
+  .carousel_slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .carousel_button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .carousel_button-left {
+    left: -40px;
+  }
+
+  .carousel_button-right {
+    right: -40px;
+  }
+
+  .carousel_nav {
+    background: pink;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .carousel_indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin: 0 12px;
+    background: #fff;
+  }
+
+  .carousel_indicator.current-slide {
+    background: black;
+  }
+
+  .is-hidden { display: none;}
+
+</style>
+
+<body>
+
+
+  <div class="carousel">
+    <button class="carousel_button carousel_button-left is-hidden">prev</button>
+    <div class="carousel_track-container">
+      <ul class="carousel_track">
+        <li class="carousel_slide current-slide">
+          <img class="carousel_image" src="img/cabin-1-1.webp" alt="">
+        </li>
+        <li class="carousel_slide">
+          <img class="carousel_image" src="img/cabin-1-2.webp" alt="">
+        </li>
+        <li class="carousel_slide">
+          <img class="carousel_image" src="img/cabin-1-3.jpeg" alt="">
+        </li>
+      </ul>
+    </div>
+    <button class="carousel_button carousel_button-right">next</button>
+
+    <!-- <div class="carousel_nav">
+      <button class="carousel_indicator current-slide"></button>
+      <button class="carousel_indicator"></button>
+      <button class="carousel_indicator"></button>
+    </div> -->
+  </div>
+
+
+  <img src="icons/pop-out-icon.svg" alt="">
+
+  <script>
+    const track = document.querySelector('.carousel_track')
+   
+    const slides = Array.from(track.children)
+    console.log(slides)
+    const nextButton = document.querySelector('.carousel_button-right')
+    const prevButton = document.querySelector('.carousel_button-left')
+    // const dotsNav = document.querySelector('.carousel_nav')
+    // const dots = Array.from(dotsNav.children)
+ 
+    const slideWidth = slides[0].getBoundingClientRect().width;
+
+    // arrange slides next to one another
+    const setSlidePosition = (slide, index) => {
+      slide.style.left = slideWidth * index + 'px'
+    }
+    slides.forEach(setSlidePosition)
+
+    const moveToSlide = (track, currentSlide, targetSlide) => {
+      track.style.transform = 'translateX(-' + targetSlide.style.left + ')'
+      currentSlide.classList.remove('current-slide')
+      targetSlide.classList.add('current-slide')
+    }
+
+    // when i click left, move slides to the left
+    prevButton.addEventListener('click', e => {
+      const currentSlide = track.querySelector('.current-slide')
+      const prevSlide = currentSlide.previousElementSibling
+      const prevIndex = slides.findIndex(slide => slide === prevSlide)
+
+      moveToSlide(track, currentSlide, prevSlide)
+      hideNextButton(prevIndex)
+    })
+
+    // when i click right, move slides to the right
+    nextButton.addEventListener('click', e => {
+      const currentSlide = track.querySelector('.current-slide')
+      const nextSlide = currentSlide.nextElementSibling
+      const nextIndex = slides.findIndex(slide => slide === nextSlide)
+
+      moveToSlide(track, currentSlide, nextSlide)
+      hideNextButton(nextIndex);
+    })
+
+
+
+    function hideNextButton(targetIndex){
+    if (targetIndex === 0) {
+      prevButton.classList.add('is-hidden')
+      nextButton.classList.remove('is-hidden')
+    } else if (targetIndex === slides.length - 1){
+      nextButton.classList.add('is-hidden')
+      prevButton.classList.remove('is-hidden')
+    } else {
+      prevButton.classList.remove('is-hidden')
+      nextButton.classList.remove('is-hidden')
+    }
+  }
+  </script>
+ 
+</body>
+
+</html>
